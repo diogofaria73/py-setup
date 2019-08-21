@@ -5,7 +5,6 @@ import subprocess
 def packages():
 
     snapList = []
-
     snapList.append('snapd')
     snapList.append('snapcraft --classic')
     snapList.append('node --classic')
@@ -18,8 +17,3 @@ def packages():
     snapList.append('htop')
 
     return snapList
-
-
-def hasInstalled(snap_list):
-        
-    return snap_list
