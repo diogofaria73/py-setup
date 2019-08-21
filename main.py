@@ -1,16 +1,14 @@
 import os
 import subprocess
-import sources.packages as py_manager
+import sources.snap as snap
+import utils.command as command
 
 try:
-    print('We are reading the repositories list')
-    
-    for snap in py_manager.snap():
-    
-         print('Executing: {}' .format(snap))
-         subprocess.call(snap, shell=True)
-         print('Installation executed successfully')
-         
+    # Get definied list and install all packages
+    for snap in snap.hasInstalled(snap.packages()):
+        install = 'sudo snap install '
+        subprocess.call(command.mount(install, snap), shell=True)
+
 except:
     print('Something are wrong. Please try again later')
-        
+
