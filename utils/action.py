@@ -5,3 +5,10 @@ def mount(comand, snap):
 
 def clean_screan():
     return os.system('clear')
+
+def begin_message(item):
+    print('##########################################################################')
+    print('{} package ' .format(item))
+
+def end_message(item):
+    print('{} was successfull ' .format(item))

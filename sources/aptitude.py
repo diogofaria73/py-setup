@@ -5,6 +5,7 @@ def packages():
     aptList.append('update')
     aptList.append('install build-essential')
     aptList.append('install libssl-dev')
+    aptList.append('install git-all')
 
     return aptList
 
